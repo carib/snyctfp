@@ -16,8 +16,7 @@
 # 1¢, 3¢
 
 def change_possibilities(amount, nums)
-  memo = {}
-  key = ''
+  tally = {}
   i = 0
   while i < nums.size
     sum = nums[i]
@@ -37,15 +36,15 @@ def change_possibilities(amount, nums)
           j += 1
         end
         if sum === amount
-          memo[hold.sort.map(&:to_s).join] = sum
+          tally[hold.sort.map(&:to_s).join] = sum
           sum = nums[i]
           hold = [nums[i]]
         end
       end
+      i += 1 if j >= nums.size
     end
-    i += 1 if j >= nums.size
   end
-  memo.keys.size
+  tally.keys.size
 end
 
 p change_possibilities(3, [3, 2, 1]) === 3
