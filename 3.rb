@@ -46,9 +46,9 @@ def change_possibilities(amount, nums)
   tally.keys.size
 end
 
-# p change_possibilities(3, [3, 2, 1]) #=== 3
-# p change_possibilities(4, [1, 2, 3]) #=== 4
-p change_possibilities(6, [1, 2, 3]) #=== 7
+p change_possibilities(3, [3, 2, 1]) === 3
+p change_possibilities(4, [1, 2, 3]) === 4
+p change_possibilities(6, [1, 2, 3]) === 7
 
 ### 3 ###
 # 3
